@@ -30,7 +30,10 @@ const blogContainer = document.getElementById('blog-container');
 
 blogs.forEach((blog) => {
     const blogDiv = document.createElement("div");
-    blogDiv.className = "blog-post";
+    blogDiv.className = "blog";
+
+    const blogInfo = document.createElement("div");
+    blogInfo.className = "blog-info";
 
     const blogTitle = document.createElement("h1");
     blogTitle.className = "blog-title";
@@ -49,13 +52,14 @@ blogs.forEach((blog) => {
     blogImage.alt = blog.imageAlt;
     blogImage.width = 100;
 
-    blogDiv.appendChild(blogTitle);
-    blogDiv.appendChild(blogDate);
-    blogDiv.appendChild(blogDescription);
-    blogDiv.appendChild(blogImage);
+    blogInfo.appendChild(blogTitle);
+    blogInfo.appendChild(blogDate);
+    blogInfo.appendChild(blogDescription);
+    blogInfo.appendChild(blogImage);
 
     if (blogContainer){
         blogContainer.appendChild(blogDiv);
+        blogDiv.appendChild(blogInfo);
     }
 
 })

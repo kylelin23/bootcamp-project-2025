@@ -19,7 +19,9 @@ var blogs = [
 var blogContainer = document.getElementById('blog-container');
 blogs.forEach(function (blog) {
     var blogDiv = document.createElement("div");
-    blogDiv.className = "blog-post";
+    blogDiv.className = "blog";
+    var blogInfo = document.createElement("div");
+    blogInfo.className = "blog-info";
     var blogTitle = document.createElement("h1");
     blogTitle.className = "blog-title";
     blogTitle.textContent = blog.title;
@@ -33,11 +35,12 @@ blogs.forEach(function (blog) {
     blogImage.src = blog.image;
     blogImage.alt = blog.imageAlt;
     blogImage.width = 100;
-    blogDiv.appendChild(blogTitle);
-    blogDiv.appendChild(blogDate);
-    blogDiv.appendChild(blogDescription);
-    blogDiv.appendChild(blogImage);
+    blogInfo.appendChild(blogTitle);
+    blogInfo.appendChild(blogDate);
+    blogInfo.appendChild(blogDescription);
+    blogInfo.appendChild(blogImage);
     if (blogContainer) {
         blogContainer.appendChild(blogDiv);
+        blogDiv.appendChild(blogInfo);
     }
 });
