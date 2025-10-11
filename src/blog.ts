@@ -47,6 +47,7 @@ blogs.forEach((blog) => {
     const blogImage = document.createElement("img");
     blogImage.src = blog.image;
     blogImage.alt = blog.imageAlt;
+    blogImage.width = 100;
 
     blogDiv.appendChild(blogTitle);
     blogDiv.appendChild(blogDate);

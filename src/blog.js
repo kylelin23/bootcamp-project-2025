@@ -11,7 +11,7 @@ var blogs = [
         title: "First Week of School",
         date: "September 24th, 2025",
         description: "My first week went well! I'm not used to living off campus, but it's not too bad. The bus comes really often and is pretty consistent. Even if I do miss the bus, I can also always walk to school because the walk to school is only thirty minutes.",
-        image: "/assets/blog1.jpeg",
+        image: "assets/blog1.jpeg",
         imageAlt: "Blog Photo",
         slug: ""
     }
@@ -32,6 +32,7 @@ blogs.forEach(function (blog) {
     var blogImage = document.createElement("img");
     blogImage.src = blog.image;
     blogImage.alt = blog.imageAlt;
+    blogImage.width = 100;
     blogDiv.appendChild(blogTitle);
     blogDiv.appendChild(blogDate);
     blogDiv.appendChild(blogDescription);
