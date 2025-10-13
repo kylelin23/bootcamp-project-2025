@@ -292,6 +292,7 @@ h1, p {
 .blog-description {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.5;
+    color: black;
 }
 
 .contact {
@@ -331,16 +332,22 @@ h1, p {
     align-items: center;
     gap: 20px;
     width: 50vw;
+    text-decoration: none;
 }
 
 .blog-date {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
 }
 
 .blog-title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
 }
 
 .blog-image {
     border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5;
 }
