@@ -1,0 +1,15 @@
+.gradientContainer {
+    background: url('assets/subtle-prism.svg');
+    background-size: 100% auto;
+    height: calc(85vh - 80px);
+    display: flex;
+    justify-content: center;
+    padding-top: 15vh;
+    background-position: center;
+}
+
+.pageTitle {
+    font-size: 100px;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

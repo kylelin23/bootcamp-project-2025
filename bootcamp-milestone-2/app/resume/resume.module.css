@@ -1,0 +1,24 @@
+.gradient-container {
+    background: url('assets/subtle-prism.svg');
+    background-size: 100% auto;
+    height: calc(85vh - 80px);
+    display: flex;
+    justify-content: center;
+    padding-top: 15vh;
+    background-position: center;
+}
+
+.resume-button {
+    border-radius: 5px;
+    background-color: lightskyblue;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.resume-button-container {
+    display: flex;
+    justify-content: center;
+}
