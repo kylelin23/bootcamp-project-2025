@@ -1,6 +1,6 @@
 import style from "./contact.module.css";
 
-export default function Blog() {
+export default function Contact() {
   return (
     <div>
       <div className={style.gradientContainer}>

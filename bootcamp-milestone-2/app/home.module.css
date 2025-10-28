@@ -1,7 +1,7 @@
 .container {
-    background: url('assets/aboutImage.jpeg');
+    background: url('../public/assets/aboutImage.jpeg');
     background-size: cover;
-    height: calc(85vh - 80px);
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     padding-top: 15vh;
