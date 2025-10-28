@@ -15,7 +15,7 @@ export default function Home() {
           </p>
           <p>
             I am currently pursuing my
-            <strong>Bachelors of Science in Computer Science
+            <strong> Bachelors of Science in Computer Science
             at California Polytechnic State University in
             San Luis Obispo as an honors student</strong>,
             and have an anticipated graduation date of 2027.

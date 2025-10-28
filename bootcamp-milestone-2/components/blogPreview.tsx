@@ -1,14 +1,14 @@
 import style from './blogPreview.module.css'
+import type { Blog } from '../app/blogData'
 
-export default function BlogPreview() {
+export default function BlogPreview({title, date, description, image, imageAlt }: Blog) {
   return (
     <div className = {style.blog}>
         <div className = {style.schoolContainer}>
-            <p className = {style.blogText}><strong>October 1st, 2025</strong></p>
-        </div>
-
-        <div className = {style.schoolContainer}>
-            <p className = {style.blogText}><strong>September 24th, 2025</strong></p>
+            <p className = {style.blogTitle}>{title}</p>
+            <p className = {style.blogText}><strong>{date}</strong></p>
+            <p className = {style.blogText}>{description}</p>
+            <img className = {style.blogImage} src = {image} alt = {imageAlt} width = {200}></img>
         </div>
     </div>
   );

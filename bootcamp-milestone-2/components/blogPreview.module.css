@@ -34,3 +34,9 @@
     border-color: black;
     border-width: 5;
 }
+
+.blogTitle {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 30;
+}
