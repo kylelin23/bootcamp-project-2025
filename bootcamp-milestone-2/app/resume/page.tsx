@@ -1,5 +1,7 @@
 import Link from "next/link";
 import style from "./resume.module.css";
+import Skill from "../../components/skill"
+import { programmingLanguages, frontEnd, backEnd, other, certifications } from "../resumeData"
 
 export default function Resume() {
   return (
@@ -80,158 +82,62 @@ export default function Resume() {
 
           <p className={style.skillSectionTitle}>Programming Languages</p>
           <div className={style.skills}>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/python-logo-only.png"
-                width = {100}
-                alt="Python Logo"
+            {programmingLanguages.map(skill =>
+              <Skill
+                key = {skill.key}
+                name = {skill.name}
+                img = {skill.img}
+                imgAlt = {skill.imgAlt}
               />
-              Python
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/javaLogo.png"
-                width = {100}
-                alt="Java Logo"
-              />
-              Java
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/cLogo.png"
-                width = {100}
-                alt="C Logo"
-              />
-              C
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/javascriptLogo.png"
-                width = {100}
-                alt="JavaScript Logo"
-              />
-              JavaScript
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/typescriptLogo.png"
-                width = {100}
-                alt="TypeScript Logo"
-              />
-              TypeScript
-            </div>
+            )}
           </div>
 
           <p className={style.skillSectionTitle}>Front-End</p>
           <div className={style.skills}>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/reactNativeIcon.png"
-                width = {100}
-                alt="React Native Logo"
+            {frontEnd.map(skill =>
+              <Skill
+                key = {skill.key}
+                name = {skill.name}
+                img = {skill.img}
+                imgAlt = {skill.imgAlt}
               />
-              React Native
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/reactNativeIcon.png"
-                width = {100}
-                alt="React Logo"
-              />
-              React
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/viteLogo.png"
-                width = {100}
-                alt="Vite Logo"
-              />
-              Vite
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/htmlIcon.png"
-                width = {100}
-                alt="HTML Logo"
-              />
-              HTML
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/cssIcon.png"
-                width = {100}
-                alt="CSS Logo"
-              />
-              CSS
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/figmaIcon.png"
-                width = {100}
-                alt="Figma Logo"
-              />
-              Figma
-            </div>
+            )}
           </div>
 
           <p className={style.skillSectionTitle}>Back-End</p>
           <div className={style.skills}>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/supabase-logo-icon.png"
-                width = {100}
-                alt="Supabase Logo"
+            {backEnd.map(skill =>
+              <Skill
+                key = {skill.key}
+                name = {skill.name}
+                img = {skill.img}
+                imgAlt = {skill.imgAlt}
               />
-              Supabase
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/postgresqlLogo.png"
-                width = {100}
-                alt="PostgreSQL Logo"
-              />
-              PostgreSQL
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/mongoDBLogo.png"
-                width = {100}
-                alt="MongoDB Logo"
-              />
-              MongoDB
-            </div>
+            )}
           </div>
 
           <p className={style.skillSectionTitle}>Other</p>
           <div className={style.skills}>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/gitLogo.png"
-                width = {100}
-                alt="Git Logo"
+            {other.map(skill =>
+              <Skill
+                key = {skill.key}
+                name = {skill.name}
+                img = {skill.img}
+                imgAlt = {skill.imgAlt}
               />
-              Git
-            </div>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/github-mark.png"
-                width = {100}
-                alt="GitHub Logo"
-              />
-              GitHub
-            </div>
+            )}
           </div>
 
           <p className={style.skillSectionTitle}>Certifications</p>
           <div className={style.skills}>
-            <div className={style.skill}>
-              <img
-                src="assets/logos/awsIcon.png"
-                width = {100}
-                alt="AWS Logo"
+            {certifications.map(skill =>
+              <Skill
+                key = {skill.key}
+                name = {skill.name}
+                img = {skill.img}
+                imgAlt = {skill.imgAlt}
               />
-              AWS Certified Cloud Practitioner
-            </div>
+            )}
           </div>
         </div>
       </div>
