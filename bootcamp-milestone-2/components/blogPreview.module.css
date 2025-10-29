@@ -26,6 +26,7 @@
 .blogText {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.5;
+    color: black;
 }
 
 .blogImage {
@@ -39,4 +40,5 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.5;
     font-size: 30;
+    color: black;
 }
