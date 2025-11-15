@@ -1,9 +1,27 @@
 import Link from "next/link";
 import style from "./portfolio.module.css"
 import Project from "../../components/project"
-import projects from "../portfolioData"
+// import projects from "../portfolioData"
+import projectSchema from "../database/projectSchema"
+import connectDB from "../database/db"
 
-export default function Portfolio() {
+async function getProjects(){
+    await connectDB() // function from db.ts before
+
+    try {
+        // query for all blogs and sort by date
+        const blogs = await projectSchema.find().sort({ date: -1 }).orFail()
+        // send a response as the blogs as the message
+        return blogs
+    } catch (err) {
+        return null
+    }
+  }
+
+export default async function Portfolio() {
+
+  const projects = await getProjects() ?? [];
+
   return (
     <div>
         <div className = {style.gradientContainer}>
