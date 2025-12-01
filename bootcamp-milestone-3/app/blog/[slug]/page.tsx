@@ -1,3 +1,6 @@
+import BlogPreview from "../../../components/blogPreview"
+import style from "../blog.module.css";
+
 type Props = {
     params: Promise<{ slug: string }>
     // params: { slug: string }
@@ -30,6 +33,18 @@ export default async function Blog(props: Props) {
     const blog = await getBlog(slug);
 
 	return (
-        <h1>{blog.image}</h1>
+        <div className = {style.height}>
+			<div>
+				<BlogPreview
+					key = {blog.slug}
+					title = {blog.title}
+					date = {blog.date}
+					description = {blog.description}
+					image = {blog.image}
+					imageAlt = {blog.imageAlt}
+					slug = {blog.slug}
+				/>
+			</div>
+		</div>
     )
 }

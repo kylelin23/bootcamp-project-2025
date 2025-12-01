@@ -2,7 +2,6 @@ import style from "./blog.module.css";
 import Link from "next/link";
 
 
-
 export default function Blog() {
   return (
     <div>

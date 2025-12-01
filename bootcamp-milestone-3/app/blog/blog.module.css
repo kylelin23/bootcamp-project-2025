@@ -16,7 +16,7 @@
 }
 
 .infoContainer {
-    background-color: white;
+    background-color: #f5f7fa;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -45,4 +45,11 @@
     border-width: 2px;
     padding: 15px;
     background-color: #95b9e8;
+}
+
+.height {
+    height: calc(100vh - 220px);
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
 }
