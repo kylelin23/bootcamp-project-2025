@@ -14,3 +14,35 @@
     font-weight: bold;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
+.infoContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 275;
+}
+
+.link {
+    color: black;
+    font-size: 2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.midAutumnContainer {
+    border-radius: 10;
+    border-color: black;
+    border-width: 2px;
+    padding: 15px;
+    background-color: #edab79;
+}
+
+.firstWeekOfSchool {
+    border-radius: 10;
+    border-color: black;
+    border-width: 2px;
+    padding: 15px;
+    background-color: #95b9e8;
+}

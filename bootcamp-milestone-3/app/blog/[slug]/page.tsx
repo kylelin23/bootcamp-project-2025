@@ -1,5 +1,6 @@
 type Props = {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
+    // params: { slug: string }
 }
 
 async function getBlog(slug: string) {
@@ -23,10 +24,12 @@ async function getBlog(slug: string) {
 	}
 }
 
-export default async function Blog({ params: {slug} }: Props) {
-	const blog = await getBlog(slug);
+export default async function Blog(props: Props) {
+	const { slug } = await props.params;
+
+    const blog = await getBlog(slug);
 
 	return (
-        <h1>blog.title</h1>
+        <h1>{blog.image}</h1>
     )
 }
