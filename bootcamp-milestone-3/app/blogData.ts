@@ -1,9 +1,12 @@
+import type { IComment } from '../components/Comment'
+
 export type Blog = {
     title: string;
     date: string;
     description: string;
     image: string;
     imageAlt: string;
+    comments: IComment;
     slug: string;
 }
 
@@ -14,6 +17,11 @@ const blogs: Blog[] = [
         description: "Today is the mid autumn festival, and to celebrate I am eating mooncakes. ",
         image: "assets/mooncake.jpeg",
         imageAlt: "Mooncake Photo",
+        comments: {
+            user: "Gary",
+            comment: "Looks delicious! ",
+            time: new Date("2025-11-03T10:30:00")
+        },
         slug: "midAutumnFestival.html"
     },
     {
@@ -22,6 +30,11 @@ const blogs: Blog[] = [
         description: "My first week went well! I'm not used to living off campus, but it's not too bad. The bus comes really often and is pretty consistent. Even if I do miss the bus, I can also always walk to school because the walk to school is only thirty minutes.",
         image: "assets/blog1.jpeg",
         imageAlt: "Blog Photo",
+        comments: {
+            user: "John",
+            comment: "Living off campus sounds great! ",
+            time: new Date("2025-10-14T10:30:00")
+        },
         slug: "firstWeekOfSchool.html"
     }
 ]

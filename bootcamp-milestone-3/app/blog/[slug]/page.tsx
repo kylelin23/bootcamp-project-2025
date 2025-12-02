@@ -1,5 +1,6 @@
 import BlogPreview from "../../../components/blogPreview"
 import style from "../blog.module.css";
+import Comment from "../../../components/Comment"
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -31,6 +32,8 @@ export default async function Blog(props: Props) {
 	const { slug } = await props.params;
 
     const blog = await getBlog(slug);
+	console.log("Page blog:", JSON.stringify(blog, null, 2));
+
 
 	return (
         <div className = {style.height}>
@@ -42,6 +45,7 @@ export default async function Blog(props: Props) {
 					description = {blog.description}
 					image = {blog.image}
 					imageAlt = {blog.imageAlt}
+					comments = {blog.comments}
 					slug = {blog.slug}
 				/>
 			</div>

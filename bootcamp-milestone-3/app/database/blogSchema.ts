@@ -1,3 +1,4 @@
+import { IComment } from "@/components/Comment";
 import mongoose, { Schema } from "mongoose";
 
 // typescript type (can also be an interface)
@@ -7,9 +8,16 @@ type Blog = {
     description: string;
     image: string;
     imageAlt: string;
+    comments: IComment;
     slug: string;
 };
 
+
+const commentSchema = new Schema({
+  user: { type: String, required: true },
+  comment: { type: String, required: true },
+  time: { type: Date, required: true },
+});
 
 // mongoose schema
 const blogSchema = new Schema<Blog>({
@@ -19,6 +27,7 @@ const blogSchema = new Schema<Blog>({
     description: { type: String, required: true },
     image: { type: String, required: true },
     imageAlt: { type: String, required: true },
+    comments: {type: commentSchema, required: true},
     slug: { type: String, required: true },
 })
 
