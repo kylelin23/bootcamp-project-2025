@@ -1,3 +1,5 @@
+import style from './comment.module.css'
+
 
 {/* When we pass props, the name that we use to pass values
 		is the key for the type
@@ -20,7 +22,6 @@ type CommentProps = {
 function parseCommentTime(time: Date){
 
     const date = time.toString();
-    // 2025-11-03T18:30:00.000Z
     const month = date.slice(5,7);
     const day = date.slice(8,10);
     const dayNumber = Number(day);
@@ -49,9 +50,12 @@ function parseCommentTime(time: Date){
 function Comment({ comment }: CommentProps) {
     return (
         <div>
-            <div>{comment.user}</div>
-            <div>{comment.comment}</div>
-            <span>{parseCommentTime(comment.time)}</span>
+            <div className = {style.commentContainer}>
+                <div className = {style.userText}>{comment.user}</div>
+                <div className = {style.commentText}>{comment.comment}</div>
+                <div className = {style.dateText}>{parseCommentTime(comment.time)}</div>
+            </div>
+
         </div>
     );
 }

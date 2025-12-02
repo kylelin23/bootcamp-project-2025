@@ -10,6 +10,7 @@ export default function BlogPreview({title, date, description, image, imageAlt, 
             <p className = {style.blogText}><strong>{date}</strong></p>
             <p className = {style.blogText}>{description}</p>
             <img className = {style.blogImage} src = {image} alt = {imageAlt} width = {200}></img>
+            <div className = {style.commentTitle}>Comments: </div>
             <Comment
               comment = {comments}
             />

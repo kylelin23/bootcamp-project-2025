@@ -42,3 +42,10 @@
     font-size: 30;
     color: black;
 }
+
+.commentTitle {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 25;
+    color: black;
+}
