@@ -1,8 +1,19 @@
 import style from './blogPreview.module.css'
-import type { Blog } from '../../app/blogData'
+// import type { Blog } from '../../app/blogData'
 import Comment from '../comment/Comment';
+import type { IComment } from '../comment/Comment'
 
-export default function BlogPreview({title, date, description, image, imageAlt, comments }: Blog) {
+type Blog = {
+    title: string;
+    date: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    comments: IComment[];
+    slug: string;
+}
+
+export default function BlogPreview({ title, date, description, image, imageAlt, comments }: Blog) {
   return (
     <div className = {style.blog}>
         <div className = {style.schoolContainer}>
@@ -12,7 +23,7 @@ export default function BlogPreview({title, date, description, image, imageAlt, 
             <img className = {style.blogImage} src = {image} alt = {imageAlt} width = {200}></img>
             <div className = {style.commentTitle}>Comments: </div>
             <Comment
-              comment = {comments}
+              comments = {comments}
             />
         </div>
     </div>

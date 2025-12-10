@@ -12,7 +12,7 @@ export type IComment = {
 };
 
 type CommentProps = {
-    comment: IComment;
+    comments: IComment[];
 }
 
 
@@ -47,14 +47,16 @@ function parseCommentTime(time: Date){
 
 }
 
-function Comment({ comment }: CommentProps) {
+function Comment({ comments }: CommentProps) {
     return (
         <div>
-            <div className = {style.commentContainer}>
-                <div className = {style.userText}>{comment.user}</div>
-                <div className = {style.commentText}>{comment.comment}</div>
+            {comments.map ((comment, index) =>
+                <div className = {style.commentContainer} key = {index}>
+                    <div className = {style.userText}>{comment.user}</div>
+                    <div className = {style.commentText}>{comment.comment}</div>
                 <div className = {style.dateText}>{parseCommentTime(comment.time)}</div>
             </div>
+            )}
 
         </div>
     );

@@ -1,4 +1,4 @@
-import { IComment } from "../components/comment/Comment";
+import type { IComment } from "../components/comment/Comment";
 import mongoose, { Schema } from "mongoose";
 
 // typescript type (can also be an interface)
@@ -8,7 +8,7 @@ type Blog = {
     description: string;
     image: string;
     imageAlt: string;
-    comments: IComment;
+    comments: IComment[];
     slug: string;
 };
 
@@ -27,7 +27,7 @@ const blogSchema = new Schema<Blog>({
     description: { type: String, required: true },
     image: { type: String, required: true },
     imageAlt: { type: String, required: true },
-    comments: {type: commentSchema, required: true},
+    comments: {type: [commentSchema], required: true},
     slug: { type: String, required: true },
 })
 

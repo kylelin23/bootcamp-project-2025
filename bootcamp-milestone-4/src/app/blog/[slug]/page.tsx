@@ -1,6 +1,5 @@
 import BlogPreview from "../../../components/blogPreview/blogPreview"
 import style from "../blog.module.css";
-import Comment from "../../../components/comment/Comment"
 
 type Props = {
     params: Promise<{ slug: string }>
