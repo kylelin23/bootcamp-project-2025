@@ -28,7 +28,7 @@ export default function BlogPreview({ title, date, description, image, imageAlt,
     const form = document.getElementById("contact-form") as HTMLFormElement | null;
 
     if (!form) {
-      console.error("Form #contact-form not found");
+      console.error("Form not found");
       return;
     }
 
@@ -90,6 +90,7 @@ export default function BlogPreview({ title, date, description, image, imageAlt,
             <p className = {style.blogText}>{description}</p>
             <img className = {style.blogImage} src = {image} alt = {imageAlt} width = {200}></img>
             <div className = {style.commentTitle}>Comments: </div>
+            <div className = {style.errorText}>{error}</div>
             <form id="contact-form">
               <input
                 className={style.input}
