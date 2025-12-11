@@ -24,5 +24,12 @@
     border-radius: 15;
     border-width: 2px;
     padding: 10px;
+    width: 40vw;
 
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

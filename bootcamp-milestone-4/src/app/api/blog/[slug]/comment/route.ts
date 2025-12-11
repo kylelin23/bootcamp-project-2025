@@ -1,7 +1,6 @@
 import connectDB from "@/src/database/db";
 import Blog from "@/src/database/blogSchema";
 import { NextRequest, NextResponse } from "next/server";
-import { Noto_Sans_Old_Hungarian } from "next/font/google";
 
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
@@ -29,7 +28,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     const updatedBlog = await Blog.findOneAndUpdate(
         { slug: slug },
         { $push: { comments: newComment } },
-        { new: true } // return updated doc
+        { new: true }
     );
 
     if (!updatedBlog) {
@@ -38,4 +37,8 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
             { status: 404 }
         );
     }
+
+    return NextResponse.json(updatedBlog, { status: 200 });
+
+    
 }

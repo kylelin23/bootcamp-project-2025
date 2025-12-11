@@ -49,7 +49,7 @@ function parseCommentTime(time: Date){
 
 function Comment({ comments }: CommentProps) {
     return (
-        <div>
+        <div className = {style.comments}>
             {comments.map ((comment, index) =>
                 <div className = {style.commentContainer} key = {index}>
                     <div className = {style.userText}>{comment.user}</div>

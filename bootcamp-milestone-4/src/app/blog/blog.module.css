@@ -48,7 +48,7 @@
 }
 
 .height {
-    height: calc(100vh - 220px);
+    /* height: calc(100vh - 220px); */
     background-color: #f5f7fa;
     display: flex;
     justify-content: center;
