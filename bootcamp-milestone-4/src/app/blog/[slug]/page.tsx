@@ -9,7 +9,11 @@ type Props = {
 async function getBlog(slug: string) {
 	try {
 		// This fetches the blog from an api endpoint that would GET the blog
-		const res = await fetch(`https://personalwebsite_-three-swart.vercel.app/api/blog/${slug}`, {
+
+		const baseURL = process.env.NEXT_PUBLIC_PROD_URL!;
+		console.log("BASE URL:", baseURL)
+
+		const res = await fetch(`${baseURL}/api/blog/${slug}`, {
 			cache: "no-store",
 		})
 		// This checks that the GET request was successful
