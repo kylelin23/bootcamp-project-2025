@@ -1,6 +1,6 @@
 import Link from "next/link";
 import style from "./project.module.css";
-import type {Project} from "../app/portfolioData"
+import type {Project} from "../../app/portfolioData"
 
 export default function Project({title, tech, description, image, imageAlt, imageLink, imageWidth}: Project) {
   return (
