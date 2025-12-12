@@ -1,7 +1,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
-import connectDB from "@/app/database/db"
-import projectSchema from "@/app/database/projectSchema"
+import connectDB from "@/src/database/db"
+import projectSchema from "@/src/database/projectSchema"
 
 /* IParams is a TypeScript type definition that describes the structure of the second
    argument that Next.js passes to our API route handler.
