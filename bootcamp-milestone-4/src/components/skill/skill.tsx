@@ -1,5 +1,5 @@
 import style from "./skill.module.css";
-import type { Skill } from "../app/resumeData"
+import type { Skill } from "../../app/resumeData"
 
 export default function Skill({name, img, imgAlt}: Skill) {
   return (
